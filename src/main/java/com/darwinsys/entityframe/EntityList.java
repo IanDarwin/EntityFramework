@@ -29,6 +29,6 @@ public abstract class EntityList<T extends Object> {
 	}
 	
 	public int getResultCount() {
-		return (int) getEntityManager().createQuery("select count(*) from " + entityClass.getName()).getSingleResult();
+		return (Integer) getEntityManager().createQuery("select count(*) from " + entityClass.getName()).getSingleResult();
 	}
 }
