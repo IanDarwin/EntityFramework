@@ -1,39 +1,13 @@
--- drop sequence my_poid_sequence;
+-- SAMPLE DATA ONLY
 
--- Data for simple person use
-insert into Person(id, version, firstname, lastname) values(-101, 1, 'Christopher', 'Robin');
-insert into Person(id, version, firstname, lastname) values(-102, 1, 'Ian', 'Darwin');
+-- Some Frameworks
+insert into frameworks (id,name,url,year,sponsor,shortdesc,longdesc,implsubdir,licencetype,type,mod_date,language,version) values(1, 'Struts', 'http://struts.apache.org/', 1999, 'Apache Software Foundation', 'The original Java MVC web framework.', 'The original Java MVC web framework.', 'struts', 'ASL', 'MVC'  , '2009-04-11', 'j', 0)
+insert into frameworks (id,name,url,year,sponsor,shortdesc,longdesc,implsubdir,licencetype,type,mod_date,language,version) values(2, 'Velocity', 'http://velocity.apache.org/', 2000, 'Apache Software Foundation', 'Template engine', 'A widely used templating engine.', null, 'ASL-2', ,'V' , 'j', 0)
+insert into frameworks (id,name,url,year,sponsor,shortdesc,longdesc,implsubdir,licencetype,type,mod_date,language,version) values(3, 'ActionServlet', 'http://www.actionframework.org/', 2000, 'Petr Toman', 'Simple MVC framework?', 'Simpler than Struts, but not as much infrastructure.', null, null, 'C', null, 'j', 0)
 
--- Data for Actors
-insert into Person(id, version, firstName, lastName) values(-103, 1, 'Harrison', 'Ford')
-insert into Actor(id) values (-103)
-insert into Person(id, version, firstName, lastName) values(-104, 1, 'Mark', 'Hamill')
-insert into Actor(id) values (-104)
-insert into Person(id, version, firstName, lastName) values(-105, 1, 'Carrie', 'Fisher')
-insert into Actor(id) values (-105)
-insert into Person(id, version, firstName, lastName) values(-106, 1, 'Clark', 'Gable')
-insert into Actor(id) values (-106)
-insert into Person(id, version, firstName, lastName) values(-107, 1, 'Vivien', 'Leigh')
-insert into Actor(id) values (-107)
-
--- Data for Videos
-insert into Recording (id, version, title, price) values(-200, 1, 'Gone With The Wind', 0)
-insert into VideoRecording (id, year) values (-200, 1939)
-insert into Recording (id, version, title, price) values(-201, 1, 'Star Wars IV: A New Hope', 0)
-insert into VideoRecording (id, year) values (-201, 1977)
-insert into Recording (id, version, title, price) values(-202, 1, 'Indiana Jones: Raiders of the Lost Ark', 0)
-insert into VideoRecording (id, year) values (-202, 1981)
-insert into Recording (id, version, title, price) values(-203, 1, 'Patriot Games', 0)
-insert into VideoRecording (id, year) values (-203, 1992)
-
--- Video<-->Actors join table
-insert into Actor_VideoRecording(actors_id, videos_id) values (-103, -201)
-insert into Actor_VideoRecording(actors_id, videos_id) values (-103, -202)
-insert into Actor_VideoRecording(actors_id, videos_id) values (-103, -203)
-insert into Actor_VideoRecording(actors_id, videos_id) values (-104, -201)
-insert into Actor_VideoRecording(actors_id, videos_id) values (-105, -201)
-insert into Actor_VideoRecording(actors_id, videos_id) values (-106, -200)
-insert into Actor_VideoRecording(actors_id, videos_id) values (-107, -200)
-
--- Composite Primary Key demo
--- insert into fish(speciesId, individualId, fishName) values(255, 001, 'Fred')
+-- And some Usage examples
+insert into usage (id, company, domain, howknown, bus_type, mod_date, version) values( 1, 'Best Buy', 'bestbuy.com', 'Developer', 'Electronics', '2009-04-10', 0)
+insert into usage (id, company, domain, howknown, bus_type, mod_date, version) values( 2, 'Canadian Tire', 'canadiantire.com', 'Page names *.jsp', 'Big box Hardware/Automotive', '2009-04-12', 0)
+insert into usage (id, company, domain, howknown, bus_type, mod_date, version) values( 3, 'LinkedIn', 'linkedin.com', 'http://www.slideshare.net/linkedin/linkedins-communication-architecture', 'Social Networking', '2009-04-10', 0)
+insert into usage (id, company, domain, howknown, bus_type, mod_date, version) values( 7, 'U.S. Postal Service', 'usps.gov', 'http://java.sun.com/nav/used/', 'Mail delivery', '2009-04-10', 0)
+insert into usage (id, company, domain, howknown, bus_type, mod_date, version) values( 9, 'partypoker.com', 'partypoker.com', 'Terracotta', 'Developer', 'Online Gaming site', '2009-04-10, 0
