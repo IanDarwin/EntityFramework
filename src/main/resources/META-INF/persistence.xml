@@ -4,24 +4,40 @@
    version="1.0">
    
 <persistence-unit name="ds_hsqldb">
-	<!--
 	<provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
-	-->
+	<!--
 	<provider>org.hibernate.ejb.HibernatePersistence</provider>
-
+	-->
 	<exclude-unlisted-classes>false</exclude-unlisted-classes>
 
 	<properties>
 
 	<!-- Properties for eclipselink -->
+	<property name="eclipselink.target-database"
+	      value="org.eclipse.persistence.platform.database.H2Platform"/>
+	
+	<!-- JNDI:
+	"javax.persistence.transactionType" - Standard JPA PersistenceUnitTransactionType property, "JTA" or "RESOURCE_LOCAL".
+	"javax.persistence.jtaDataSource" - Standard JPA JTA DataSource name.
+	"javax.persistence.nonJtaDataSource" - Standard JPA non-JTA DataSource name.
+	-->
+        <property name="javax.persistence.transactionType" value="JTA"/>
+	<property name="javax.persistence.jtaDataSource" value="java:jboss/datasources/ExampleDS"/>
+	
+	<!-- JDBC
+	The usual four JDBC params
+	-->
+	<!--
 	<property name="eclipselink.jdbc.driver" value="org.hsqldb.jdbcDriver"/>
 	<property name="eclipselink.jdbc.url" value="jdbc:hsqldb:mem:jpademo.db"/>
 	<property name="eclipselink.jdbc.user" value="sa"/>
 	<property name="eclipselink.jdbc.password" value=""/>
-	<property name="eclipselink.target-database"
-	      value="org.eclipse.persistence.platform.database.HSQLPlatform"/>
+	-->
+
 	<property name="eclipselink.logging.level" value="OFF"/>
 	<property name="eclipselink.orm.throw.exceptions" value="true"/>
+
+	<!-- Database mode - create-drop - DO NOT USE IN PRODUCTION -->
 	<property name="eclipselink.ddl-generation" value="drop-and-create-tables"/>
 	<property name="eclipselink.ddl-generation.output-mode" value="database"/>
 
