@@ -3,7 +3,6 @@ package dao;
 import java.util.List;
 
 import javax.persistence.EntityManager;
-import javax.persistence.PersistenceContext;
 
 /**
  * Patterned loosely after the Seam2 Entity Framework: methods for getting a list of Entities.
