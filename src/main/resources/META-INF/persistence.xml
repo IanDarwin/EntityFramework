@@ -16,13 +16,13 @@
 	<property name="eclipselink.target-database"
 	      value="org.eclipse.persistence.platform.database.H2Platform"/>
 	
-	<!-- JNDI:
-	"javax.persistence.transactionType" - Standard JPA PersistenceUnitTransactionType property, "JTA" or "RESOURCE_LOCAL".
-	"javax.persistence.jtaDataSource" - Standard JPA JTA DataSource name.
-	"javax.persistence.nonJtaDataSource" - Standard JPA non-JTA DataSource name.
-	-->
         <property name="javax.persistence.transactionType" value="JTA"/>
+
+	<!-- Choose between JBoss and Tomcat JNDI location
 	<property name="javax.persistence.jtaDataSource" value="java:jboss/datasources/jwfDatasource"/>
+	-->
+	<property name="javax.persistence.jtaDataSource" value="jdbc/jwfDatasource"/>
+
 	
 	<!-- JDBC
 	The usual four JDBC params
@@ -48,7 +48,7 @@
 	<property name="hibernate.show_sql" value="true"/>
 	<property name="hibernate.format_sql" value="false"/>
 	<property name="hibernate.archive.autodetection" value="class"/>
-	<property name="hibernate.connection.datasource" value="java:jboss/datasources/jwfDatasource"/>
+	<property name="hibernate.connection.datasource" value="jdbc/jwfDatasource"/>
 	<property name="hibernate.transaction.factory.class" value="org.hibernate.transaction.JTATransactionFactory"/>
 	<property name="hibernate.dialect" value="org.hibernate.dialect.HSQLDialect"/>
 
