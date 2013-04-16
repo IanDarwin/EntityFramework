@@ -6,7 +6,7 @@ insert into frameworks (id,name,url,year,sponsor,shortdesc,longdesc,implsubdir,l
 insert into frameworks (id,name,url,year,sponsor,shortdesc,longdesc,implsubdir,licencetype,type,mod_date,language,version) values(3, 'ActionServlet', 'http://www.actionframework.org/', 2000, 'Petr Toman', 'Simple MVC framework?', 'Simpler than Struts, but not as much infrastructure.', null, null, 'C', null, 'j', 0)
 
 -- And some Usage examples
-insert into usage(id, company,domain,framework,howknown,version) values(11, 'Canada Post','canadapost.ca', 'JSF', 'URLs', 0);
+insert into usage (id, company,domain,framework,howknown,version) values(11, 'Canada Post','canadapost.ca', 'JSF', 'URL names', 0);
 insert into usage (id, company, domain, howknown, bus_type, mod_date, version) values( 1, 'Best Buy', 'bestbuy.com', 'Developer', 'Electronics', '2009-04-10', 0)
 insert into usage (id, company, domain, howknown, bus_type, mod_date, version) values( 2, 'Canadian Tire', 'canadiantire.com', 'Page names *.jsp', 'Big box Hardware/Automotive', '2009-04-12', 0)
 insert into usage (id, company, domain, howknown, bus_type, mod_date, version) values( 3, 'LinkedIn', 'linkedin.com', 'http://www.slideshare.net/linkedin/linkedins-communication-architecture', 'Social Networking', '2009-04-10', 0)
