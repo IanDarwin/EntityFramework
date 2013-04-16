@@ -22,7 +22,7 @@
 	"javax.persistence.nonJtaDataSource" - Standard JPA non-JTA DataSource name.
 	-->
         <property name="javax.persistence.transactionType" value="JTA"/>
-	<property name="javax.persistence.jtaDataSource" value="java:jboss/datasources/ExampleDS"/>
+	<property name="javax.persistence.jtaDataSource" value="java:jboss/datasources/jwfDatasource"/>
 	
 	<!-- JDBC
 	The usual four JDBC params
@@ -46,7 +46,7 @@
 	<property name="hibernate.show_sql" value="true"/>
 	<property name="hibernate.format_sql" value="false"/>
 	<property name="hibernate.archive.autodetection" value="class"/>
-	<property name="hibernate.connection.datasource" value="java:jboss/datasources/ExampleDS"/>
+	<property name="hibernate.connection.datasource" value="java:jboss/datasources/jwfDatasource"/>
 	<property name="hibernate.transaction.factory.class" value="org.hibernate.transaction.JTATransactionFactory"/>
 	<property name="hibernate.dialect" value="org.hibernate.dialect.HSQLDialect"/>
 
