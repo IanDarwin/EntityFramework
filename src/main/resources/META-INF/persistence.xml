@@ -42,7 +42,9 @@
 	<property name="eclipselink.ddl-generation.output-mode" value="database"/>
 
 	<!-- Properties for Hibernate -->
-	<property name="hibernate.hbm2ddl.auto" value="create-drop"/>
+
+	<!-- DO NOT USE CREATE_DROP IN PRODUCTION -->
+	<property name="hibernate.hbm2ddl.auto" value="verify"/>
 	<property name="hibernate.show_sql" value="true"/>
 	<property name="hibernate.format_sql" value="false"/>
 	<property name="hibernate.archive.autodetection" value="class"/>
