@@ -1,4 +1,4 @@
-package com.darwinsys.entityframework.server;
+package entityframe;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;

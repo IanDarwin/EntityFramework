@@ -1,17 +1,15 @@
-package com.darwinsys.entityframework.server;
+package entityframe;
 
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertTrue;
 
 import java.util.List;
 
-import model.Entity1;
-
 import org.junit.Test;
 
 public class EntityListDbTest extends DatabaseUsingTest {
 	
-	EntityList<Entity1> rl = new EntityList<Entity1>();
+	Entity1List rl = new Entity1List();
 
 	@Test
 	public void testGetResultList() {
