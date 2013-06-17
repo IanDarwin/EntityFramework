@@ -29,7 +29,7 @@ public class FrameworkList extends EntityList<Framework> {
  */
 public abstract class EntityList<T extends Object> {
 
-	abstract EntityManager getEntityManager();
+	public abstract EntityManager getEntityManager();
 	
 	protected Class<T> entityClass;
 	
