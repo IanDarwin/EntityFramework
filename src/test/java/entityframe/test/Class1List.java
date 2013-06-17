@@ -1,7 +1,9 @@
-package entityframe;
+package entityframe.test;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
+
+import entityframe.EntityList;
 
 public class Class1List extends EntityList<Class1> {
 
@@ -9,7 +11,7 @@ public class Class1List extends EntityList<Class1> {
 	protected EntityManager entityManager;
 	
 	@Override
-	EntityManager getEntityManager() {
+	public EntityManager getEntityManager() {
 		return entityManager;
 	}
 	

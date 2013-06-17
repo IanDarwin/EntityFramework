@@ -7,6 +7,9 @@ import java.util.List;
 
 import org.junit.Test;
 
+import entityframe.test.Entity1;
+import entityframe.test.Entity1List;
+
 public class EntityListDbTest extends DatabaseUsingTest {
 	
 	Entity1List rl = new Entity1List();
