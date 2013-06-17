@@ -6,7 +6,7 @@ import java.lang.reflect.Type;
 public class EntityQuery {
 	public static Class<?> getEntityClass(Object inquirer) {
 		// We need to find the actual entity type. Since there are likely to be
-		// proxies implemented by subclassing in a JBoss environment,
+		// proxies implemented by subclassing in some EE environments,
 		// look for the "genericSuperclass()" in super-super... classes,
 		// stopping only if we find one with types OR get to Object.
 		System.out.println("EntityHome.EntityHome()");
