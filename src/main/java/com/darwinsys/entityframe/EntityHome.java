@@ -1,10 +1,23 @@
-package dao;
+package com.darwinsys.entityframe;
 
 import javax.persistence.EntityManager;
 
 /**
  * Patterned loosely after the Seam2 Entity Framework; contains
- * methods to manipulate one entity.
+ * methods to manipulate one entity. Typical usage:
+ * <pre>
+ * @ManagedBean(name="frameworkHome")
+ * public class FrameworkHome extends EntityHome<Framework> {
+ *
+ * 	@PersistenceContext(unitName = "jwf")
+ * 	protected EntityManager entityManager;
+ *	
+ * 	@Override
+ * 	EntityManager getEntityManager() {
+ * 		return entityManager;
+ * 	}
+ * }
+ * </pre>
  * @author Ian Darwin
  * @param <T> The type of the JPA Entity we want to manipulate.
  */

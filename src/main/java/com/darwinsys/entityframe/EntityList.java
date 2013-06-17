@@ -1,11 +1,28 @@
-package dao;
+package com.darwinsys.entityframe;
 
 import java.util.List;
 
 import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
 
 /**
  * Patterned loosely after the Seam2 Entity Framework: methods for getting a list of Entities.
+ * Typical usage:
+ * <pre>
+ * @ManagedBean(name="frameworkList")
+@RequestScoped
+public class FrameworkList extends EntityList<Framework> {
+
+	@PersistenceContext(unitName = "jwf")
+	protected EntityManager entityManager;
+	
+	@Override
+	EntityManager getEntityManager() {
+		return entityManager;
+	}
+
+}
+ * </pre>
  * @author Ian Darwin
  *
  * @param <T> The type of the JPA entity that you want to list.
