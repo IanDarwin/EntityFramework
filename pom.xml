@@ -1,0 +1,44 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>com.darwinsys</groupId>
+	<artifactId>entityframe</artifactId>
+	<version>1.0.0</version>
+	<packaging>jar</packaging>
+	<inceptionYear>2012</inceptionYear>
+
+	<name>JPA DAO layer similar to Seam 2 "Entity Framework"</name>
+	<url>http://darwinsys.com/</url>
+    
+    <dependencies>
+        
+		<!-- Annotation processor to generate the JPA 2.0 metamodel classes 
+ 	        for typesafe criteria queries -->
+ 	     <dependency>
+ 	        <groupId>org.hibernate</groupId>
+  	       <artifactId>hibernate-jpamodelgen</artifactId>
+  	       <version>1.1.1.Final</version>
+  	       <scope>provided</scope>
+  	    </dependency>
+
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-validator</artifactId>
+            <version>3.1.0.GA</version>
+        </dependency>
+        
+        <dependency>
+		    <groupId>org.hibernate.javax.persistence</groupId>
+		    <artifactId>hibernate-jpa-2.0-api</artifactId>
+		    <version>1.0.1.Final</version>
+		</dependency>
+
+	  <dependency>
+	    <groupId>junit</groupId>
+	    <artifactId>junit</artifactId>
+	    <version>4.8.2</version>
+	    <scope>test</scope>
+	  </dependency>
+	</dependencies>
+</project>
