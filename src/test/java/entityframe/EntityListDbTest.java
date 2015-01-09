@@ -5,6 +5,8 @@ import static org.junit.Assert.assertTrue;
 
 import java.util.List;
 
+import javax.persistence.EntityTransaction;
+
 import org.junit.Test;
 
 import entityframe.test.Class1;
@@ -12,16 +14,20 @@ import entityframe.test.Class1List;
 
 public class EntityListDbTest extends DatabaseUsingTest {
 	
-	Class1List rl = new Class1List();
+	Class1List lister = new Class1List();
 
 	@Test
 	public void testGetResultList() {
 		System.out.println("Class1ListDbTest.testGetResultList()");
 		assertNotNull(entityManager);
-		rl.setEntityManager(entityManager);
+		lister.setEntityManager(entityManager);
+		final EntityTransaction transaction = entityManager.getTransaction();
+		transaction.begin();
 		Class1 c = new Class1(); c.name = "Atypical User";
 		entityManager.persist(c);
-		final List<Class1> resultList = rl.getResultList();
+		entityManager.flush();
+		final List<Class1> resultList = lister.getResultList();
+		transaction.commit();
 		assertNotNull(resultList);
 		assertTrue("rl.getResultList()", resultList.size() > 0);
 	}
