@@ -7,7 +7,7 @@ import com.darwinsys.entityframe.*;
 
 public class Class1List extends EntityList<Class1> {
 
-	@PersistenceContext(unitName = "ds_demo")
+	@PersistenceContext
 	protected EntityManager entityManager;
 	
 	@Override
