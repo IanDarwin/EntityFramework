@@ -3,11 +3,11 @@ package entityframe.test;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 
-import entityframe.EntityList;
+import com.darwinsys.entityframe.*;
 
-public class Class1List extends EntityList<Class1> {
+public class DemoEntityList extends EntityList<Class1> {
 
-	@PersistenceContext(unitName = "demo")
+	@PersistenceContext(unitName = "ds_demo")
 	protected EntityManager entityManager;
 	
 	@Override

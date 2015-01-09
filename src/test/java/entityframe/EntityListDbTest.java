@@ -7,19 +7,19 @@ import java.util.List;
 
 import org.junit.Test;
 
-import entityframe.test.Entity1;
-import entityframe.test.Entity1List;
+import entityframe.test.Class1;
+import entityframe.test.Class1List;
 
 public class EntityListDbTest extends DatabaseUsingTest {
 	
-	Entity1List rl = new Entity1List();
+	Class1List rl = new Class1List();
 
 	@Test
 	public void testGetResultList() {
-		System.out.println("Entity1ListDbTest.testGetResultList()");
+		System.out.println("Class1ListDbTest.testGetResultList()");
 		assertNotNull(entityManager);
 		rl.setEntityManager(entityManager);
-		final List<Entity1> resultList = rl.getResultList();
+		final List<Class1> resultList = rl.getResultList();
 		assertNotNull(resultList);
 		assertTrue("rl.getResultList()", resultList.size() > 0);
 	}
