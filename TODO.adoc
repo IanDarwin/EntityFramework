@@ -3,3 +3,6 @@
 What has to be done is the hard part: makgin the entity queries work.
 Needs to reflect on the Entity class, get properties, get their values
 from the provided bean, if not null, add to the Entity Query. Later...
+
+Before you do this, make sure there isn't a way to harness Apache DeltaSpike Data
+to do this for you!

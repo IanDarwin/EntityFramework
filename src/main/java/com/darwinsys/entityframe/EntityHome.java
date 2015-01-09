@@ -23,7 +23,7 @@ import javax.persistence.EntityManager;
  */
 public abstract class EntityHome<T extends Object> {
 
-	abstract EntityManager getEntityManager();
+	public abstract EntityManager getEntityManager();
 	protected Class<T> entityClass;
 	
 	@SuppressWarnings("unchecked")
