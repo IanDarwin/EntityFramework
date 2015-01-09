@@ -13,6 +13,20 @@
     
     <dependencies>
         
+		<!-- Java EE API -->
+		<dependency>
+		   <groupId>javax</groupId>    
+			<artifactId>javaee-web-api</artifactId>    
+			<version>7.0</version>  
+		</dependency> 
+ 
+		<!-- PrimeFaces JSF Add-on -->
+		<dependency>
+			<groupId>org.primefaces</groupId>
+			<artifactId>primefaces</artifactId>
+			<version>4.0</version>
+		</dependency>
+
 		<!-- Annotation processor to generate the JPA 2.0 metamodel classes 
  	        for typesafe criteria queries -->
  	     <dependency>
@@ -40,5 +54,6 @@
 	    <version>4.8.2</version>
 	    <scope>test</scope>
 	  </dependency>
+
 	</dependencies>
 </project>
