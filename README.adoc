@@ -2,4 +2,6 @@
 
 This intends to be somewhat of a drop-in replacement for the Seam2 Entity Framework.
 
+Current status is: broken. It compiles but doesn't run, due to issues with datasources.
+
 Some of this work was done at the Centre for Global eHealth Innovation (ehealthinnovation.org).
