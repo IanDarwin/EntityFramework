@@ -29,6 +29,8 @@ public class EntityListDbTest extends DatabaseUsingTest {
 		final List<Class1> resultList = lister.getResultList();
 		transaction.commit();
 		assertNotNull(resultList);
-		assertTrue("rl.getResultList()", resultList.size() > 0);
+		final int size = resultList.size();
+		System.out.println("Found " + size + " records.");
+		assertTrue("rl.getResultList()", size > 0);
 	}
 }

@@ -13,16 +13,16 @@
 	<class>entityframe.Class1</class>
 	
 	<properties>
+	    <!-- Database-specific properties -->
+	    <property name="javax.persistence.jdbc.driver" value="org.hsqldb.jdbcDriver"/>
+      	<property name="javax.persistence.jdbc.url" value="jdbc:hsqldb:file:target/testdb;shutdown=true"/>
+      	<property name="javax.persistence.jdbc.user" value="sa"/>
+      	<property name="javax.persistence.jdbc.password" value=""/>
+      	<!-- Hibernate-specific properties */ -->
+      	<property name="hibernate.dialect" value="org.hibernate.dialect.HSQLDialect"/>
 		<property name="hibernate.hbm2ddl.auto" value="create-drop"/>
 		<property name="hibernate.show_sql" value="true"/>
 		<property name="hibernate.format_sql" value="true"/>
-		<property name="hibernate.archive.autodetection" value="class"/>
-		<property name="hibernate.connection.driver_class" value="org.hsqldb.jdbcDriver"/>
-		<property name="hibernate.connection.url" value="jdbc:hsqldb:mem:testing.db"/>
-		<property name="hibernate.connection.username" value="sa"/>
-		<property name="hibernate.connection.password" value=""/>
-		<property name="hibernate.transaction.factory.class" value="org.hibernate.transaction.JTATransactionFactory"/>
-		<property name="hibernate.dialect" value="org.hibernate.dialect.HSQLDialect"/>
 	</properties>
 	
 </persistence-unit>

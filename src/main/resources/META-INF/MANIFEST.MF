@@ -1,4 +1,0 @@
-Manifest-Version: 1.0
-Created-By: Ian Darwin
-Dependencies: org.eclipse.persistence
-

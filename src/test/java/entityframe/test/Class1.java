@@ -17,5 +17,10 @@ public class Class1 {
 	
 	public String name;
 	public String address;
+	
+	@Override
+	public String toString() {
+		return String.format("Class1: name=%s", name);
+	}
 
 }
