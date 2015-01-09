@@ -2,7 +2,8 @@
 
 This intends to be somewhat of a drop-in replacement for the Seam2 Entity Framework.
 
-Current status is: broken. It compiles but doesn't run, due to issues with datasources.
+It works for adding entities using the Home object, and listing all the entities of a given class
+using the List object. See the TODO file for why this is not enough.
 
 Some of this work may have been done at the Centre for Global eHealth Innovation (ehealthinnovation.org),
 based on my years of experience with Seam2 and JPA at previous engagements.
