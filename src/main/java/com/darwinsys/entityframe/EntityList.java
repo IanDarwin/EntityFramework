@@ -13,7 +13,7 @@ import javax.persistence.PersistenceContext;
 @RequestScoped
 public class FrameworkList extends EntityList<Framework> {
 
-	@PersistenceContext(unitName = "jwf")
+	@PersistenceContext
 	protected EntityManager entityManager;
 	
 	@Override

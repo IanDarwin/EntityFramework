@@ -9,7 +9,7 @@ import javax.persistence.EntityManager;
  * @ManagedBean(name="frameworkHome")
  * public class FrameworkHome extends EntityHome<Framework> {
  *
- * 	@PersistenceContext(unitName = "jwf")
+ * 	@PersistenceContext
  * 	protected EntityManager entityManager;
  *	
  * 	@Override
