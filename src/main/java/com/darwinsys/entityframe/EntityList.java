@@ -9,7 +9,7 @@ import javax.persistence.EntityTransaction;
  * Patterned loosely after the Seam2 Entity Framework: methods for getting a list of Entities.
  * Typical usage:
  * <pre>
- * @ManagedBean(name="frameworkList")
+ * @Named(name="frameworkList")
  * @RequestScoped
  * public class FrameworkList extends EntityList<Framework> {
  * 
@@ -43,17 +43,18 @@ public abstract class EntityList<T extends Object> {
 		System.out.printf("EntityList<%s>.getResultList()", entityClass.getName());
 		final EntityTransaction transaction = getEntityManager().getTransaction();
 		boolean weStartedIt = false;
+		// In an EE environment, tx should be running; in SE or in testing, start it.
 		if (!transaction.isActive()) {
 			transaction.begin();
 			weStartedIt = true;
 		}
 		try {
-		return getEntityManager().createQuery("from " + entityClass.getName()).getResultList();
+			return getEntityManager().createQuery("from " + entityClass.getName()).getResultList();
 		} finally {
 			if (weStartedIt)
 				transaction.commit();
 		}
-		}
+	}
 	
 	public long getResultCount() {
 		return (Long) getEntityManager().createQuery("select count(*) from " + entityClass.getName()).getSingleResult();
