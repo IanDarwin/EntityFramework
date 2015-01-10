@@ -6,7 +6,7 @@ import javax.persistence.EntityManager;
  * Patterned loosely after the Seam2 Entity Framework; contains
  * methods to manipulate one entity. Typical usage:
  * <pre>
- * @ManagedBean(name="frameworkHome")
+ * @Named(name="frameworkHome")
  * public class FrameworkHome extends EntityHome<Framework> {
  *
  * 	@PersistenceContext

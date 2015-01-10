@@ -1,10 +1,12 @@
 package entityframe.test;
 
+import javax.inject.Named;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 
 import com.darwinsys.entityframe.*;
 
+@Named("classHome")
 public class Class1Home extends EntityHome<Class1> {
 
 	@PersistenceContext
